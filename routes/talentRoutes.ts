@@ -3,7 +3,7 @@ import Talent from '../models/talentModel';
 
 const router = Router();
 
-router.get('/talents', async (req, res) => {
+router.get('/', async (req, res) => {
   try {
     const talents = await Talent.find(); 
     res.status(200).json(talents);
